@@ -19,24 +19,22 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
 
-## Rubric Points
-### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
+[dataset_example]: ./writeup_figure/dataset_example.png "Dataset Example Images"
+[train_hist]: ./writeup_figure/train_hist.png "Train Image Histogram"
+[valid_hist]: ./writeup_figure/valid_hist.png "Validation Image Histogram"
+[test_hist]: ./writeup_figure/test_hist.png "Train Image Histogram"
+[grayscale]: ./writeup_figure/grayscale.png "Grayscale"
+[normalized]: ./writeup_figure/normalized.png "Normalized"
+[augment]: ./writeup_figure/augment.png "Augmentated Data"
+[web_figure]: ./writeup_figure/web_figure.png "Web Figure"
 
 ---
 ### Writeup / README
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/JiangboYu13/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ### Data Set Summary & Exploration
 
