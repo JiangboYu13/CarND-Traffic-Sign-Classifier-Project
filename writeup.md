@@ -141,9 +141,11 @@ If an iterative approach was chosen:
 
     * To achieve a better accuracy, I adopted two technique:
         - Data augmentayion
-            Change the brightness of original training data randomly and add Gaussian noise to it to produce more training data.
+            
+        Change the brightness of original training data randomly and add Gaussian noise to it to produce more training data.
         - Dropout
-            Add dropout layer after the FC layer to overcome the overfitting issue.
+            
+        Add dropout layer after the FC layer to overcome the overfitting issue.
   
 ### Test a Model on New Images
 
