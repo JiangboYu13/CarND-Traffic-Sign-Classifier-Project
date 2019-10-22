@@ -13569,7 +13569,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train_norm</span> <span class="o">=</span> <span class="p">(</span><span class="n">X_train_gry</span><span class="o">-</span><span class="mi">128</span><span class="p">)</span><span class="o">/</span><span class="mi">128</span>
@@ -13642,7 +13642,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#By randomly changing the brightness and add gaussian noise to augment training images</span>
@@ -13722,7 +13722,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train_norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">X_train_norm</span><span class="p">,</span> <span class="n">X_train_auged</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -13756,7 +13756,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train_norm</span>
@@ -13771,7 +13771,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Define your architecture here.</span>
@@ -13813,7 +13813,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">EPOCHS</span> <span class="o">=</span> <span class="mi">60</span>
@@ -13856,7 +13856,7 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Train your model here.</span>
@@ -13873,7 +13873,7 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.utils</span> <span class="k">import</span> <span class="n">shuffle</span>
@@ -13886,7 +13886,7 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">correct_prediction</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">tf</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">one_hot_y</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
@@ -13911,7 +13911,7 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_acc</span> <span class="o">=</span> <span class="mi">0</span>
@@ -13958,218 +13958,207 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 <pre>Training...
 
 EPOCH 1 ...
-Validation Accuracy = 0.849
+Validation Accuracy = 0.877
 
-Validation Accuracy increases from 0.000 to 0.849
+Validation Accuracy increases from 0.000 to 0.877
 
 EPOCH 2 ...
-Validation Accuracy = 0.899
+Validation Accuracy = 0.909
 
-Validation Accuracy increases from 0.849 to 0.899
+Validation Accuracy increases from 0.877 to 0.909
 
 EPOCH 3 ...
-Validation Accuracy = 0.920
+Validation Accuracy = 0.936
 
-Validation Accuracy increases from 0.899 to 0.920
+Validation Accuracy increases from 0.909 to 0.936
 
 EPOCH 4 ...
-Validation Accuracy = 0.933
-
-Validation Accuracy increases from 0.920 to 0.933
+Validation Accuracy = 0.932
 
 EPOCH 5 ...
-Validation Accuracy = 0.948
+Validation Accuracy = 0.946
 
-Validation Accuracy increases from 0.933 to 0.948
+Validation Accuracy increases from 0.936 to 0.946
 
 EPOCH 6 ...
-Validation Accuracy = 0.941
+Validation Accuracy = 0.934
 
 EPOCH 7 ...
-Validation Accuracy = 0.948
+Validation Accuracy = 0.951
+
+Validation Accuracy increases from 0.946 to 0.951
+Model saved
 
 EPOCH 8 ...
-Validation Accuracy = 0.959
-
-Validation Accuracy increases from 0.948 to 0.959
-Model saved
+Validation Accuracy = 0.950
 
 EPOCH 9 ...
-Validation Accuracy = 0.951
-
-EPOCH 10 ...
 Validation Accuracy = 0.948
 
+EPOCH 10 ...
+Validation Accuracy = 0.961
+
+Validation Accuracy increases from 0.951 to 0.961
+Model saved
+
 EPOCH 11 ...
-Validation Accuracy = 0.958
+Validation Accuracy = 0.942
 
 EPOCH 12 ...
-Validation Accuracy = 0.961
-
-Validation Accuracy increases from 0.959 to 0.961
-Model saved
+Validation Accuracy = 0.956
 
 EPOCH 13 ...
-Validation Accuracy = 0.956
-
-EPOCH 14 ...
 Validation Accuracy = 0.954
 
+EPOCH 14 ...
+Validation Accuracy = 0.957
+
 EPOCH 15 ...
-Validation Accuracy = 0.951
+Validation Accuracy = 0.958
 
 EPOCH 16 ...
-Validation Accuracy = 0.957
+Validation Accuracy = 0.953
 
 EPOCH 17 ...
-Validation Accuracy = 0.961
-
-EPOCH 18 ...
-Validation Accuracy = 0.959
-
-EPOCH 19 ...
-Validation Accuracy = 0.955
-
-EPOCH 20 ...
-Validation Accuracy = 0.956
-
-EPOCH 21 ...
-Validation Accuracy = 0.963
-
-Validation Accuracy increases from 0.961 to 0.963
-Model saved
-
-EPOCH 22 ...
-Validation Accuracy = 0.962
-
-EPOCH 23 ...
-Validation Accuracy = 0.962
-
-EPOCH 24 ...
-Validation Accuracy = 0.966
-
-Validation Accuracy increases from 0.963 to 0.966
-Model saved
-
-EPOCH 25 ...
-Validation Accuracy = 0.961
-
-EPOCH 26 ...
-Validation Accuracy = 0.968
-
-Validation Accuracy increases from 0.966 to 0.968
-Model saved
-
-EPOCH 27 ...
-Validation Accuracy = 0.964
-
-EPOCH 28 ...
-Validation Accuracy = 0.972
-
-Validation Accuracy increases from 0.968 to 0.972
-Model saved
-
-EPOCH 29 ...
-Validation Accuracy = 0.956
-
-EPOCH 30 ...
-Validation Accuracy = 0.966
-
-EPOCH 31 ...
-Validation Accuracy = 0.959
-
-EPOCH 32 ...
-Validation Accuracy = 0.965
-
-EPOCH 33 ...
-Validation Accuracy = 0.961
-
-EPOCH 34 ...
 Validation Accuracy = 0.970
 
-EPOCH 35 ...
-Validation Accuracy = 0.961
-
-EPOCH 36 ...
-Validation Accuracy = 0.972
-
-Validation Accuracy increases from 0.972 to 0.972
+Validation Accuracy increases from 0.961 to 0.970
 Model saved
 
-EPOCH 37 ...
-Validation Accuracy = 0.969
-
-EPOCH 38 ...
-Validation Accuracy = 0.957
-
-EPOCH 39 ...
-Validation Accuracy = 0.965
-
-EPOCH 40 ...
-Validation Accuracy = 0.960
-
-EPOCH 41 ...
-Validation Accuracy = 0.968
-
-EPOCH 42 ...
-Validation Accuracy = 0.966
-
-EPOCH 43 ...
+EPOCH 18 ...
 Validation Accuracy = 0.961
 
-EPOCH 44 ...
+EPOCH 19 ...
+Validation Accuracy = 0.957
+
+EPOCH 20 ...
+Validation Accuracy = 0.958
+
+EPOCH 21 ...
+Validation Accuracy = 0.960
+
+EPOCH 22 ...
+Validation Accuracy = 0.958
+
+EPOCH 23 ...
+Validation Accuracy = 0.966
+
+EPOCH 24 ...
+Validation Accuracy = 0.960
+
+EPOCH 25 ...
+Validation Accuracy = 0.967
+
+EPOCH 26 ...
+Validation Accuracy = 0.963
+
+EPOCH 27 ...
+Validation Accuracy = 0.961
+
+EPOCH 28 ...
+Validation Accuracy = 0.962
+
+EPOCH 29 ...
+Validation Accuracy = 0.964
+
+EPOCH 30 ...
+Validation Accuracy = 0.967
+
+EPOCH 31 ...
+Validation Accuracy = 0.968
+
+EPOCH 32 ...
+Validation Accuracy = 0.969
+
+EPOCH 33 ...
+Validation Accuracy = 0.967
+
+EPOCH 34 ...
+Validation Accuracy = 0.969
+
+EPOCH 35 ...
+Validation Accuracy = 0.966
+
+EPOCH 36 ...
+Validation Accuracy = 0.965
+
+EPOCH 37 ...
+Validation Accuracy = 0.964
+
+EPOCH 38 ...
+Validation Accuracy = 0.961
+
+EPOCH 39 ...
+Validation Accuracy = 0.967
+
+EPOCH 40 ...
+Validation Accuracy = 0.970
+
+EPOCH 41 ...
 Validation Accuracy = 0.972
+
+Validation Accuracy increases from 0.970 to 0.972
+Model saved
+
+EPOCH 42 ...
+Validation Accuracy = 0.968
+
+EPOCH 43 ...
+Validation Accuracy = 0.966
+
+EPOCH 44 ...
+Validation Accuracy = 0.961
 
 EPOCH 45 ...
 Validation Accuracy = 0.964
 
 EPOCH 46 ...
-Validation Accuracy = 0.963
+Validation Accuracy = 0.965
 
 EPOCH 47 ...
-Validation Accuracy = 0.971
+Validation Accuracy = 0.968
 
 EPOCH 48 ...
-Validation Accuracy = 0.967
+Validation Accuracy = 0.966
 
 EPOCH 49 ...
 Validation Accuracy = 0.968
 
 EPOCH 50 ...
-Validation Accuracy = 0.969
-
-EPOCH 51 ...
-Validation Accuracy = 0.974
-
-Validation Accuracy increases from 0.972 to 0.974
-Model saved
-
-EPOCH 52 ...
 Validation Accuracy = 0.970
 
+EPOCH 51 ...
+Validation Accuracy = 0.970
+
+EPOCH 52 ...
+Validation Accuracy = 0.969
+
 EPOCH 53 ...
-Validation Accuracy = 0.968
+Validation Accuracy = 0.970
 
 EPOCH 54 ...
-Validation Accuracy = 0.971
+Validation Accuracy = 0.969
 
 EPOCH 55 ...
 Validation Accuracy = 0.966
 
 EPOCH 56 ...
-Validation Accuracy = 0.970
+Validation Accuracy = 0.968
 
 EPOCH 57 ...
-Validation Accuracy = 0.963
+Validation Accuracy = 0.969
 
 EPOCH 58 ...
-Validation Accuracy = 0.967
+Validation Accuracy = 0.964
 
 EPOCH 59 ...
-Validation Accuracy = 0.971
+Validation Accuracy = 0.966
 
 EPOCH 60 ...
-Validation Accuracy = 0.972
+Validation Accuracy = 0.973
+
+Validation Accuracy increases from 0.972 to 0.973
+Model saved
 
 Train Done!!
 </pre>
@@ -14182,7 +14171,43 @@ Train Done!!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="n">saver</span><span class="o">.</span><span class="n">restore</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span><span class="s1">&#39;./lenet&#39;</span><span class="p">)</span>
+
+    <span class="n">train_accuracy</span> <span class="o">=</span> <span class="n">evaluate</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Train Accuracy = </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">train_accuracy</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO:tensorflow:Restoring parameters from ./lenet
+Train Accuracy = 1.000
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
@@ -14207,7 +14232,7 @@ Train Done!!
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>INFO:tensorflow:Restoring parameters from ./lenet
-Test Accuracy = 0.952
+Test Accuracy = 0.955
 </pre>
 </div>
 </div>
