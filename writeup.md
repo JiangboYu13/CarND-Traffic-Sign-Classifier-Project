@@ -28,6 +28,12 @@ The goals / steps of this project are the following:
 [normalized]: ./writeup_figure/normalized.png "Normalized"
 [augment]: ./writeup_figure/augment.png "Augmentated Data"
 [web_figure]: ./writeup_figure/web_figure.png "Web Figure"
+[web_his0]: ./writeup_figure/web_hist0.png
+[web_his1]: ./writeup_figure/web_hist1.png
+[web_his2]: ./writeup_figure/web_hist2.png
+[web_his3]: ./writeup_figure/web_hist3.png
+[web_his4]: ./writeup_figure/web_hist4.png
+[web_his5]: ./writeup_figure/web_hist5.png
 
 ---
 ### Writeup / README
@@ -118,9 +124,9 @@ the beta1, beta2 and epsilon just take their default value in tensorflow.
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of 
+* training set accuracy of 0.997
 * validation set accuracy of 0.974
-* test set accuracy of ?
+* test set accuracy of 0.952
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
@@ -139,12 +145,11 @@ If a well known architecture was chosen:
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Here are six German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![web figure][web_figure] 
 
-The first image might be difficult to classify because ...
+The second image (speed limit (20km/h) with label 0) might be difficult to classify because accourding to the training data historgram, there are too few training data for label 0.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -152,31 +157,88 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Children crossing     | Children crossing  							| 
+| Speed limit (20km/h)  | No passing for vehicles over 3.5 metric tons  |
+| Double curve			| Double curve                                  |
+| Roundabout mandatory	| Roundabout mandatory   		 				|
+| No entry 				| No entry										|
+| Keep left			    | Keep left	        							|
 
+The model was able to correctly guess 5 of the 6 traffic signs, which gives an accuracy of 83.3%. This compares favorably to the accuracy on the test set of 95.2%
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+First image:
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 1.         			| Children crossing   							| 
+| .00     				| Right-of-way at the next intersection  		|
+| .00					| Beware of ice/snow							|
+| .00	      			| Bicycles crossing			 			    	|
+| .00				    | Pedestrians       							|
 
+![web histogram][web_hist0] 
+Second image:
 
-For the second image ... 
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .49         			| No passing for vehicles over 3.5 metric tons	| 
+| .24     				| Keep right                                	|
+| .22					| Vehicles over 3.5 metric tons prohibited  	|
+| .03	      			| Speed limit (50km/h)  	 			    	|
+| .01				    | Speed limit (30km/h)							|
+
+![web histogram][web_hist1] 
+
+Third image:
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .88         			| Double curve                              	| 
+| .11     				| Right-of-way at the next intersection     	|
+| .00					| Road narrows on the right                 	|
+| .00	      			| Beware of ice/snow        			    	|
+| .00				    | Bicycles crossing 							|
+
+![web histogram][web_hist2] 
+
+Fourth image:
+
+| Probability         	|     Prediction	        				    	| 
+|:---------------------:|:-------------------------------------------------:| 
+| 1.         			| Roundabout mandatory                          	| 
+| .00     				| Speed limit (100km/h)     						|
+| .00					| Priority road  					               	|
+| .00	      			| No passing for vehicles over 3.5 metric tons  	|
+| .00				    | End of no passing by vehicles over 3.5 metric tons|
+
+![web histogram][web_hist3] 
+
+Fifth image:
+
+| Probability         	|     Prediction	        				    	| 
+|:---------------------:|:-------------------------------------------------:| 
+| 1.         			| No entry                                         	| 
+| .00     				| Stop     			                       			|
+| .00					| Turn right ahead		        	               	|
+| .00	      			| Go straight or left                           	|
+| .00				    | Speed limit (120km/h)                             |
+
+![web histogram][web_hist4] 
+
+Sixth image:
+
+| Probability         	|     Prediction	        				    	| 
+|:---------------------:|:-------------------------------------------------:| 
+| .97         			| Keep left                                        	| 
+| .02     				| Turn right ahead	                       			|
+| .00					| Yield		        	                        	|
+| .00	      			| Go straight or left                           	|
+| .00				    | Speed limit (70km/h)                              |
+
+![web histogram][web_hist5] 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
