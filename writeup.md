@@ -179,7 +179,7 @@ First image:
 | .00	      			| Bicycles crossing			 			    	|
 | .00				    | Pedestrians       							|
 
-![web histogram][web_hist0] 
+![web histogram][web_his0] 
 Second image:
 
 | Probability         	|     Prediction	        					| 
@@ -190,7 +190,7 @@ Second image:
 | .03	      			| Speed limit (50km/h)  	 			    	|
 | .01				    | Speed limit (30km/h)							|
 
-![web histogram][web_hist1] 
+![web histogram][web_his1] 
 
 Third image:
 
@@ -202,7 +202,7 @@ Third image:
 | .00	      			| Beware of ice/snow        			    	|
 | .00				    | Bicycles crossing 							|
 
-![web histogram][web_hist2] 
+![web histogram][web_his2] 
 
 Fourth image:
 
@@ -214,7 +214,7 @@ Fourth image:
 | .00	      			| No passing for vehicles over 3.5 metric tons  	|
 | .00				    | End of no passing by vehicles over 3.5 metric tons|
 
-![web histogram][web_hist3] 
+![web histogram][web_his3] 
 
 Fifth image:
 
@@ -226,7 +226,7 @@ Fifth image:
 | .00	      			| Go straight or left                           	|
 | .00				    | Speed limit (120km/h)                             |
 
-![web histogram][web_hist4] 
+![web histogram][web_his4] 
 
 Sixth image:
 
@@ -238,7 +238,7 @@ Sixth image:
 | .00	      			| Go straight or left                           	|
 | .00				    | Speed limit (70km/h)                              |
 
-![web histogram][web_hist5] 
+![web histogram][web_his5] 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
